@@ -56,7 +56,7 @@ Web App Service
 
 API Management Service
 
-## ASSIGNMENT
+## Assignment
 
 ### (1) Diagram a serverless architecture (SaaS) on a cloud platform preferably Azure. Keep in mind that the codebase is C# (.NET framework), elaborate on the diagram.
 
@@ -66,8 +66,9 @@ The diagram can be found at : https://app.cloudskew.com/viewer/ece70ed1-43a5-421
 
 The migration process described here is meant to go from an on-premises, monolithic architecture to a microservices-based architecture running on Azure.
 There are three main patterns for migrating to the cloud: lift and shift, improve and move, and rip and replace. During migration, the application has a hybrid architecture where some features are in the cloud and some are still on-premises. After the migration is finished, the complete application is hosted in the cloud, but it still interacts with backend services that remain on-premises. 
-The proposed “go live plan” offers a clear boundary between services.
-##Questions in migrations;
+
+# The proposed “go live plan” offers a clear boundary between services.
+# Questions in migrations;
 How much data is to be migrated?
 How often does this data change?
 Downtime cost, how does it effect your business?
