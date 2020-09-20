@@ -33,3 +33,25 @@ Middleware, software-as-a-Service (SaaS) like Dynamics, and big data projects.
 
 Azure Functions are a great multi-purpose easy to spin-up service for Compute, Machine learning, Analytics and Transactions  but in de-constructing monolithic applications Azure functions are not a good fit, instead  Fabric which is designed explicitly for Microservices and various Docker capabilities which are well suited for Microservices. Functions don’t really have the management layers in place to be the key for large-scale microservices.
 
+
+## Azure resources required to deploy the serverless solution
+
+Resource Group
+
+Storage Account
+
+Function App
+
+MSSQL server DB Container
+
+Web App Service Plan
+
+SQL Database Server
+
+SQL Database
+
+SQL Database Table
+
+Web App Service
+
+API Management Service
