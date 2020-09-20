@@ -65,14 +65,13 @@ The diagram can be found at : https://app.cloudskew.com/viewer/ece70ed1-43a5-421
 ### (2) Create a “go live plan” and document the steps that would have to be taken prior to going live on the new environment. Try to be as detailed as possible.
 
 The migration process described here is meant to go from an on-premises, monolithic architecture to a microservices-based architecture running on Azure.
-There are three main patterns for migrating to the cloud: lift and shift, improve and move, and rip and replace. During migration, the application has a hybrid architecture where some features are in the cloud and some are still on-premises. After the migration is finished, the complete application is hosted in the cloud, but it still interacts with backend services that remain on-premises. 
+There are three main patterns for migrating to the cloud: lift and shift, improve and move, and rip and replace. During migration, the application has a hybrid architecture where some features are in the cloud and some are still on-premises. After the migration is finished, the complete application is hosted in the cloud, but it still interacts with backend services that remain on-premises. The proposed “go live plan” offers a clear boundary between services.
 
-#### The proposed “go live plan” offers a clear boundary between services.
-##### Questions in migrations;
-How much data is to be migrated?
-How often does this data change?
-Downtime cost, how does it effect your business?
-What is your current data consistency model?
+### Questions in migrations;
+#### How much data is to be migrated?
+#### How often does this data change?
+#### Downtime cost, how does it effect your business?
+#### What is your current data consistency model?
 1)	An iterative process of idea generation, prototyping, automation, presentation, information capturing, analysis and learning, defining the target Serverless Architecture (Have a fully serverless architecture involves removing the Azure VM instance).
 (2) Build separate, serverless version of the application, following a Step by Step Migration to Serverless Approach. 
 (3) Migrate in chunks, avoiding large big-bang cutovers as far as possible.  
