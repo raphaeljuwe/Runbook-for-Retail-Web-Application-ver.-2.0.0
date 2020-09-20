@@ -55,3 +55,9 @@ SQL Database Table
 Web App Service
 
 API Management Service
+
+## ASSIGNMENT
+
+Diagram a serverless architecture (SaaS) on a cloud platform preferably Azure. Keep in mind that the codebase is C# (.NET framework), elaborate on the diagram.
+
+The diagram can be found at : https://app.cloudskew.com/viewer/ece70ed1-43a5-421e-9241-7f96ba9442a6
