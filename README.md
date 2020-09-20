@@ -71,17 +71,19 @@ There are three main patterns for migrating to the cloud: lift and shift, improv
 #### How much data is to be migrated?
 #### How often does this data change?
 #### Downtime cost, how does it effect your business?
-#### What is your current data consistency model?
-1)	An iterative process of idea generation, prototyping, automation, presentation, information capturing, analysis and learning, defining the target Serverless Architecture (Have a fully serverless architecture involves removing the Azure VM instance).
-(2) Build separate, serverless version of the application, following a Step by Step Migration to Serverless Approach. 
-(3) Migrate in chunks, avoiding large big-bang cutovers as far as possible.  
+#### What is teh organization's current data consistency model?
+
+#### (1)	An iterative process of idea generation, prototyping, automation, presentation, information capturing, analysis and learning, defining the target Serverless Architecture (Have a fully serverless architecture involves removing the Azure VM instance).
+#### (2) Build separate, serverless version of the application, following a Step by Step Migration to Serverless Approach. 
+#### (3) Migrate in chunks, avoiding large big-bang cutovers as far as possible.  
 In the migration process, in the initial state of the migration the, public APIs are hosted on Azure, while the backend on-premises systems can be exposed as private APIs that are consumed only by microservices on Azure.
-## Features with independent datasets
+#### (4) Choosing which features to migrate and when to migrate them is one of the most important decisions an organization will make during this stage of the project. When making this decision, an organization must take into account the web of dependencies between features. Some features might heavily depend on others to work correctly, while others might be fairly independent. The fewer dependencies a feature has, the easier it is to migrate. Create a plan to deploy your Azure resources, including the AKS clusters, using infrastructure as code (IaC). 
+#### (5) Choose a platform to send all alerts for incidence management.
+#### (6) Implement best practices for team’s collaboration in the platform so that the actions/knowledge are captured.
+#### (7) Build basic action plans with clear steps on how to resolve the issues, who to contact, what to refer to, where to find documentation, etc. and what didn’t work. 
+
+### Features with independent datasets
 In migrating features whose datasets are independent from other datasets. These independent datasets are easier to extract from your legacy system than datasets that have dependencies. (when compared to migrating stateless features, migrating features that have independent datasets requires additional work, namely creating and managing the new data store along with actually migrating the data.)
-##Features with shared datasets
+### Features with shared datasets
 Features with shared datasets are the hardest to migrate due to the requirements for consistency, distribution, access, and latency.
 Data processed by Azure Functions can be stored into various Azure data services such as Azure storage, Azure SQL DB and Document DB.
-(4) Choosing which features to migrate and when to migrate them is one of the most important decisions an organization will make during this stage of the project. When making this decision, an organization must take into account the web of dependencies between features. Some features might heavily depend on others to work correctly, while others might be fairly independent. The fewer dependencies a feature has, the easier it is to migrate. Create a plan to deploy your Azure resources, including the AKS clusters, using infrastructure as code (IaC). 
-5.) Choose a platform to send all alerts for incidence management.
-6.) Implement best practices for team’s collaboration in the platform so that the actions/knowledge are captured.
-7.) Build basic action plans with clear steps on how to resolve the issues, who to contact, what to refer to, where to find documentation, etc. and what didn’t work. 
