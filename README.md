@@ -86,3 +86,22 @@ In migrating features whose datasets are independent from other datasets. These 
 ### Features with shared datasets
 Features with shared datasets are the hardest to migrate due to the requirements for consistency, distribution, access, and latency.
 Data processed by Azure Functions can be stored into various Azure data services such as Azure storage, Azure SQL DB and Document DB.
+
+
+### (3) Come up with a CI/CD strategy. Elaborate on the chosen tool.
+
+I am proposing a Serverless CI/CD, it offers a CI/CD service optimized for serverless workflows. It combines both Azure DevOps  and Azure function.
+A robust CI/CD (or Continuous Integration/Continuous Delivery) of such applications allows companies to ship fully tested and integrated software versions within minutes of development. It provides the backbone of the modern DevOps environment  automating CI/CD. A successful exit from the CI process triggers the continuous delivery process and delivers the software system to a QA staging area.   Continuous Integration allows development teams to integrate code changes in a shared repository almost instantaneously. 
+Continuous Delivery allows changes in the source code, configuration, content, and other artefacts to be delivered to production, and ready to be deployed to end-users, as quickly and safely as possible. 
+
+### Reasons of a Serverless CI/CD
+#### Multiple Stages & Environments
+#### Multiple environments setup for each stage of our deployment pipeline. 
+#### Preview deployments from pull requests
+#### Branch deployments enable you to deploy all commits from a branch to a specific stage. For example, you can deploy everything from the master branch to a “staging” stage, and everything from the “prod” branch to the “prod” stage. 
+#### Blue/Green Deployments
+#### Advanced Deployment Patterns
+#### Multi-region Deployments
+#### Multiple Deploys   
+#### Separating Packaging and Deployment
+#### Canary Deployments
