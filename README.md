@@ -105,3 +105,7 @@ Continuous Delivery allows changes in the source code, configuration, content, a
 #### Multiple Deploys   
 #### Separating Packaging and Deployment
 #### Canary Deployments
+
+### (4) With IaC (Infra as Code) in mind, propose a tool that can easily be integrated with your proposed environment.
+
+I am proposing Deploying an Azure Function App with Terraform
