@@ -56,8 +56,32 @@ Web App Service
 
 API Management Service
 
-## ASSIGNMENT
+# ASSIGNMENT
 
-Diagram a serverless architecture (SaaS) on a cloud platform preferably Azure. Keep in mind that the codebase is C# (.NET framework), elaborate on the diagram.
+(1) Diagram a serverless architecture (SaaS) on a cloud platform preferably Azure. Keep in mind that the codebase is C# (.NET framework), elaborate on the diagram.
 
 The diagram can be found at : https://app.cloudskew.com/viewer/ece70ed1-43a5-421e-9241-7f96ba9442a6
+
+(2) Create a “go live plan” and document the steps that would have to be taken prior to going live on the new environment. Try to be as detailed as possible.
+
+The migration process described here is meant to go from an on-premises, monolithic architecture to a microservices-based architecture running on Azure.
+There are three main patterns for migrating to the cloud: lift and shift, improve and move, and rip and replace. During migration, the application has a hybrid architecture where some features are in the cloud and some are still on-premises. After the migration is finished, the complete application is hosted in the cloud, but it still interacts with backend services that remain on-premises. 
+The proposed “go live plan” offers a clear boundary between services.
+##Questions in migrations;
+How much data is to be migrated?
+How often does this data change?
+Downtime cost, how does it effect your business?
+What is your current data consistency model?
+1)	An iterative process of idea generation, prototyping, automation, presentation, information capturing, analysis and learning, defining the target Serverless Architecture (Have a fully serverless architecture involves removing the Azure VM instance).
+(2) Build separate, serverless version of the application, following a Step by Step Migration to Serverless Approach. 
+(3) Migrate in chunks, avoiding large big-bang cutovers as far as possible.  
+In the migration process, in the initial state of the migration the, public APIs are hosted on Azure, while the backend on-premises systems can be exposed as private APIs that are consumed only by microservices on Azure.
+## Features with independent datasets
+In migrating features whose datasets are independent from other datasets. These independent datasets are easier to extract from your legacy system than datasets that have dependencies. (when compared to migrating stateless features, migrating features that have independent datasets requires additional work, namely creating and managing the new data store along with actually migrating the data.)
+##Features with shared datasets
+Features with shared datasets are the hardest to migrate due to the requirements for consistency, distribution, access, and latency.
+Data processed by Azure Functions can be stored into various Azure data services such as Azure storage, Azure SQL DB and Document DB.
+(4) Choosing which features to migrate and when to migrate them is one of the most important decisions an organization will make during this stage of the project. When making this decision, an organization must take into account the web of dependencies between features. Some features might heavily depend on others to work correctly, while others might be fairly independent. The fewer dependencies a feature has, the easier it is to migrate. Create a plan to deploy your Azure resources, including the AKS clusters, using infrastructure as code (IaC). 
+5.) Choose a platform to send all alerts for incidence management.
+6.) Implement best practices for team’s collaboration in the platform so that the actions/knowledge are captured.
+7.) Build basic action plans with clear steps on how to resolve the issues, who to contact, what to refer to, where to find documentation, etc. and what didn’t work. 
