@@ -109,3 +109,16 @@ Continuous Delivery allows changes in the source code, configuration, content, a
 ### (4) With IaC (Infra as Code) in mind, propose a tool that can easily be integrated with your proposed environment.
 
 I am proposing Deploying an Azure Function App with Terraform
+
+
+### (5) Aftercare: What monitoring tool would you use for the new environment and what metrics would you use? Explain why. 
+
+I would implement monitoring Azure Functions with Azure Monitor Logs.
+Azure Functions integrates with Azure Monitor Logs to monitor functions , sending system-generated and user-generated logs to Azure Monitor Logs, which provides the ability to consolidate logs from different resources in the same workspace, it can be analyzed with queries to quickly retrieve, consolidate, and analyze collected data. DevOps Engineers can create and test queries using Log Analytics in the Azure portal and then either directly analyze the data using these tools or save queries for use with visualizations or alert rules.
+
+### What metrics would you use?.
+
+Custom  Azure functions business metrics 
+
+Custom metrics in Azure Monitor
+
